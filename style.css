@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto';
 }
 
 body{
@@ -9,9 +10,11 @@ body{
     height: 100vh;
     width: 100vw;
     color: #fff;
-    font-family: 'Roboto';
     font-style: normal;
     color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header{
@@ -22,8 +25,8 @@ header{
     border-radius: 13px;    
     display: flex;
     padding: 0.5rem;
-    position: relative;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 
 
@@ -67,6 +70,85 @@ header{
     color: #252525;
 }
 
+
+.playground{
+    position: relative;
+    width: 800px;
+    height: 400px;
+}
+
+.line{
+    position: absolute;
+    height: 10px;
+    background: #324723;
+    gap: 10px;
+}
+
+.line1{
+    width: 133px;
+    left: 290px;    
+    top: 120px;
+
+}
+.line2{
+    width: 107px;
+    left: 220px;
+    top: 220px;
+    transform: rotate(60deg);
+
+}
+.line3{
+    width: 107px;
+    left: 387px;
+    top: 220px;
+    transform: rotate(-60deg);
+
+}
+
+
+.game-rules{
+
+    position: absolute;
+    bottom: 90px;
+    right: 60px;
+    width: 320px;
+    height: 375px;
+    background: #004429;
+    border: 7px solid #FFFFFF;
+    border-radius: 13px;
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.game-rules h1{
+    font-size: 29px;
+    margin-bottom: 2rem;
+}
+ul{
+    list-style-type: square;
+    text-align: justify;
+}
+
+li::marker{
+    background: #FFD600;
+}
+
+button{
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    background: transparent;
+    border: 2px solid #FFFFFF;
+    border-radius: 12px;
+
+}
 
 
 
