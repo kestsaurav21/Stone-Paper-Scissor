@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #8cc461;
+    height: 100vh;
+    width: 100vw;
+    color: #fff;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+header{
+    margin: 62px auto;
+    width: 800px;
+    height: 158px;
+    border: 2px solid #FFFFFF;
+    border-radius: 13px;    
+    display: flex;
+    padding: 0.5rem;
+    position: relative;
+    justify-content: space-between;
+}
+
+
+.game-title p{
+    margin-left: 12px;
+    font-weight: 600;
+    font-size: 40px;
+    white-space: pre-line;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+}
+
+.game-scorecard{
+    display: flex;
+    gap: 2rem;
+    margin: 5px;
+}
+
+.scorecard{
+    background: #FFFFFF;
+    width: 139px;
+    height: 128px;
+    border-radius: 1rem;
+}
+
+.scorecard p{
+    color: #656565;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.score{
+    font-weight: 700;
+    font-size: 68px;
+    line-height: 80px;
+    text-align: center;
+    color: #252525;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
