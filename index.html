@@ -31,29 +31,51 @@
         
     </header>
 
-    <main class="playground">
+    <main class="playground" >
 
-        <div class="circle rock" id="rock">
-            <img src="/assests/rock-icon.png" alt="rock-icon">
-        </div>
-        <div class="circle scissor" id="scissor">
-            <img src="/assests/scissor-icon.png" alt="scissor-icon" >
-        </div>
-        <div class="circle paper" id="paper">
-            <img src="/assests/paper-icon.png" alt="paper-icon">
-        </div>
+        <section id="beforeStart">
+            <div class="circle rock" id="rock">
+                <img src="/assests/rock-icon.png" alt="rock-icon">
+            </div>
+            <div class="circle scissor" id="scissor">
+                <img src="/assests/scissor-icon.png" alt="scissor-icon" >
+            </div>
+            <div class="circle paper" id="paper">
+                <img src="/assests/paper-icon.png" alt="paper-icon">
+            </div>
+    
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </section>
 
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <div class="line line3"></div>
 
+        <section id="afterResult">
 
+            <div class="circle" id="userChoice">
+            </div>
+
+            <h1 id="result-text">
+                YOU WIN AGAINST PC
+            </h1>
+
+            <div class="circle" id="computerChoice">
+            </div>
+
+            <button id="playAgain">PLAY AGAIN</button>
+
+            
+
+        </section>
+        
     </main>
 
-    <div class="cross">
+    
+
+    <div class="cross" id="rules">
         <img src="/assests/x-icon.png" alt="x-icon">
     </div>
-    <section class="game-rules">
+    <section class="game-rules" id="rules-container">
         <h3>Game Rules</h3>
         <ul>
             <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
@@ -63,7 +85,7 @@
         </ul>
     </section>
 
-    <button id="rule">RULES</button>
+    <button id="show-rules-btn">RULES</button>
 
     <!-- <script src="index.js"></script> -->
     <script src="script.js"></script>

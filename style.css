@@ -72,21 +72,12 @@ header{
 
 .playground{
     position: relative;
-    width: 800px;
+    width: 700px;
     height: 400px;
+    margin-top: 80px;
 }
 
-.circle{
-    background: #fefefe;
-    width: 125px;
-    height: 125px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    z-index: 2;
-    cursor: pointer;
-}
+
 .rock{
     position: absolute;
     top: 80px;
@@ -106,8 +97,7 @@ header{
     left: 290px;
     border: 12px solid #ffa943;
 }
-
-
+    
 .line{
     position: absolute;
     height: 10px;
@@ -135,6 +125,68 @@ header{
     transform: rotate(-60deg);
 
 }
+
+
+.circle{
+    background: #fefefe;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#afterResult{
+
+    display: none;
+    justify-content: space-between;
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+}
+
+#afterResult #userChoice{
+    position: absolute;
+    top: 150px;
+    left: 40px;
+}
+#afterResult #computerChoice{
+    position: absolute;
+    top: 150px;
+    right: 40px;
+}
+
+#afterResult button{
+    position: absolute;
+    top: 270px;
+    left: 280px;
+    color: black;
+    width: 174px;
+    height: 44px;
+    border-radius: 9px;
+    background: #FFFFFF;
+
+}
+
+#afterResult #result-text{
+    position: absolute;
+    top: 190px;
+    left: 265px;
+    width: 198px;
+    height: 100px;
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+
+
 
 
 .cross{
