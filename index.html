@@ -21,11 +21,11 @@
         <div class="game-scorecard">
             <div class="scorecard">
                 <p>COMPUTER <br> SCORE </p>
-                <div class="score">0</div>
+                <div id="computerScore" class="score">0</div>
             </div>
             <div class="scorecard">
                 <p>YOUR <br> SCORE </p>
-                <div class="score">0</div>
+                <div id="userScore" class="score">0</div>
             </div>
         </div>
         
@@ -33,14 +33,13 @@
 
     <main class="playground">
 
-
-        <div class="circle rock">
+        <div class="circle rock" id="rock">
             <img src="/assests/rock-icon.png" alt="rock-icon">
         </div>
-        <div class="circle scissor">
-            <img src="/assests/scissor-icon.png" alt="scissor-icon">
+        <div class="circle scissor" id="scissor">
+            <img src="/assests/scissor-icon.png" alt="scissor-icon" >
         </div>
-        <div class="circle paper">
+        <div class="circle paper" id="paper">
             <img src="/assests/paper-icon.png" alt="paper-icon">
         </div>
 
@@ -66,7 +65,8 @@
 
     <button id="rule">RULES</button>
 
-
+    <!-- <script src="index.js"></script> -->
+    <script src="script.js"></script>
     
 </body>
 </html>

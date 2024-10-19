@@ -85,6 +85,7 @@ header{
     align-items: center;
     border-radius: 100%;
     z-index: 2;
+    cursor: pointer;
 }
 .rock{
     position: absolute;
@@ -105,7 +106,6 @@ header{
     left: 290px;
     border: 12px solid #ffa943;
 }
-
 
 
 .line{
@@ -150,10 +150,8 @@ header{
     position: absolute;
     bottom: 390px;
     right: 40px;
+    cursor: pointer;
 }
-
-
-
 
 
 .game-rules{
@@ -203,6 +201,7 @@ button{
     background: transparent;
     border: 2px solid #FFFFFF;
     border-radius: 12px;
+    cursor: pointer;
 
 }
 
