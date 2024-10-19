@@ -137,6 +137,25 @@ header{
 }
 
 
+.cross{
+    background: #FF0000;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #FFFFFF;
+    border-radius: 100%;
+    z-index: 2;
+    position: absolute;
+    bottom: 390px;
+    right: 40px;
+}
+
+
+
+
+
 .game-rules{
     position: absolute;
     bottom: 90px;
