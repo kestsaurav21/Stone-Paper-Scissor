@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <header>
+    <header >
 
         <!-- Game Title Section -->
         <div class="game-title">
@@ -31,7 +31,7 @@
         
     </header>
 
-    <main class="playground" >
+    <main id="playground" >
 
         <section id="beforeStart">
             <div class="circle rock" id="rock">
@@ -87,7 +87,19 @@
     </div>
 
 
-    
+    <div id="result-page" style="display: none;">
+        <div id="winner-banner">
+            <img id="star-img" src="/assests/stars.png">
+            <img id="trophy-img" src="/assests/trophy.png" >
+        </div>
+
+        <div id="message">
+            <h1>HURRAY!!</h1>
+            <p>YOU WON THE GAME</p>
+        </div>
+        
+        <button id="playAgainBtn">PLAY AGAIN</button>
+    </div>
     
 
     <button id="show-rules-btn">RULES</button>

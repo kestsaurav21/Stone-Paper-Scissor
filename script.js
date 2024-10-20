@@ -3,7 +3,7 @@ const paperChoice = document.getElementById("paper");
 const scissorChoice = document.getElementById("scissor");
 
 const closeRule = document.getElementById("rules");
-const showrules = document.getElementById("show-rules-btn");
+const rulesBtn = document.getElementById("show-rules-btn");
 const ruleBox =  document.querySelector("#rule-box");
 
 const userScore = document.querySelector("#userScore");
@@ -16,6 +16,11 @@ const afterResult = document.querySelector("#afterResult");
 const resultText = document.querySelector("#result-text");
 const playAgain = document.querySelector("#playAgain");
 const nextBtn = document.querySelector("#next-btn")
+
+const header = document.querySelector("header")
+const playground = document.querySelector("#playground");
+const resultpage = document.querySelector("#result-page");
+const playAgainBtn = document.querySelector("#playAgainBtn");
 
 const ROCK = "rock";
 const PAPER = "paper";
@@ -62,7 +67,7 @@ function startGame() {
     })
 
     nextBtn.style.display = 'none';
-    showrules.style.right = '60px'
+    rulesBtn.style.right = '60px'
     ruleBox.style.display = 'none';
    
 
@@ -70,7 +75,7 @@ function startGame() {
     userScore.innerText = parseInt(userScore.innerText) + 1;
     resultText.innerText = "YOU WIN AGAINST PC";
     nextBtn.style.display = 'block';
-    showrules.style.right = '220px'
+    rulesBtn.style.right = '220px'
     ruleBox.style.display = 'none';
 
     playAgain.addEventListener('click', function play() {
@@ -79,7 +84,20 @@ function startGame() {
     })
 
     nextBtn.addEventListener('click', () => {
-        
+      header.style.display = 'none';
+      playground.style.display = 'none';
+      resultpage.style.display = 'block';
+      nextBtn.style.display = 'none';
+      rulesBtn.style.right = '60px'
+      resultpage.style.display = 'block';
+    })
+
+    playAgainBtn.addEventListener('click', () => {
+      resultpage.style.display = 'none';
+      header.style.display = 'flex';
+      playground.style.display = 'block';
+      beforeStart.style.display = 'block';
+      afterResult.style.display = 'none';
     })
 
   } else {

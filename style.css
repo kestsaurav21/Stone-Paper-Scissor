@@ -70,7 +70,7 @@ header{
 }
 
 
-.playground{
+#playground{
     position: relative;
     width: 700px;
     height: 400px;    
@@ -243,8 +243,6 @@ button{
     width: 120px;
     height: 40px;
     position: absolute;
-    /* bottom: 30px;
-    right: 220px; */
     bottom: 30px;
     right: 60px;
     font-size: 21px;
@@ -265,6 +263,50 @@ button{
     right: 60px;
 }
 
+
+/* Result Page */
+
+#result-page{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 5rem;
+    width: 520px;
+    height: 600px;
+    
+}
+#star-img{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#trophy-img{
+    position: absolute;
+    top: 95px;
+    left: 150px;
+}
+#message h1{
+    margin-top: 2rem;
+    font-size: 91px;
+    text-align: center;
+}
+#message p{
+    font-size: 41px;
+    text-align: center;
+}
+#result-page button{
+    width: fit-content;
+    height: fit-content;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    background: #FFFFFF;
+    color: black;
+    padding: 10px;
+    border: 2px solid #FFFFFF;
+    margin: 10px 120px;
+}
 
 
 
