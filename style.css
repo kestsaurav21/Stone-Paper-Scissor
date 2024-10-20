@@ -73,27 +73,26 @@ header{
 .playground{
     position: relative;
     width: 700px;
-    height: 400px;
-    margin-top: 80px;
+    height: 400px;    
 }
 
 
 .rock{
     position: absolute;
-    top: 80px;
+    top: 20px;
     left: 190px;
     border: 12px solid #0074b6;
 }
 
 .scissor{
     position: absolute;
-    top: 80px;
+    top: 20px;
     left: 390px;
     border: 12px solid #bd00ff;
 }
 .paper{
     position: absolute;
-    top: 230px;
+    top: 170px;
     left: 290px;
     border: 12px solid #ffa943;
 }
@@ -108,20 +107,20 @@ header{
 .line1{
     width: 133px;
     left: 290px;    
-    top: 120px;
+    top: 70px;
 
 }
 .line2{
     width: 107px;
     left: 240px;
-    top: 220px;
+    top: 160px;
     transform: rotate(60deg);
 
 }
 .line3{
     width: 107px;
     left: 360px;
-    top: 220px;
+    top: 160px;
     transform: rotate(-60deg);
 
 }
@@ -244,8 +243,10 @@ button{
     width: 120px;
     height: 40px;
     position: absolute;
+    /* bottom: 30px;
+    right: 220px; */
     bottom: 30px;
-    right: 40px;
+    right: 60px;
     font-size: 21px;
     line-height: 25px;
     letter-spacing: 0.1em;
@@ -254,8 +255,16 @@ button{
     border: 2px solid #FFFFFF;
     border-radius: 12px;
     cursor: pointer;
-
 }
+
+
+#next-btn{
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    right: 60px;
+}
+
 
 
 
