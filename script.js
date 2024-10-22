@@ -116,6 +116,8 @@ function startGame() {
     ruleBox.style.display = "none";
     playAgain.innerHTML = "PLAY AGAIN";
 
+
+
     nextBtn.addEventListener("click", () => {
       header.style.display = "none";
       playground.style.display = "none";
