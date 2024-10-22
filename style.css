@@ -70,12 +70,11 @@ header{
 }
 
 
-#playground{
+.playground{
     position: relative;
     width: 700px;
     height: 400px;    
 }
-
 
 .rock{
     position: absolute;
@@ -83,7 +82,6 @@ header{
     left: 190px;
     border: 12px solid #0074b6;
 }
-
 .scissor{
     position: absolute;
     top: 20px;
@@ -96,6 +94,7 @@ header{
     left: 290px;
     border: 12px solid #ffa943;
 }
+
     
 .line{
     position: absolute;
@@ -139,13 +138,29 @@ header{
 }
 
 #afterResult{
-
     display: none;
     justify-content: space-between;
     position: relative;
-
     height: 100%;
     width: 100%;
+}
+
+h3{
+    margin-top: 110px;
+    font-weight: 600;
+    color: #FFFFFF;
+    font-size: 17px;
+    line-height: 19px;
+}
+
+.user{
+    position: absolute;
+    left: 45px;
+}
+
+.pc{
+    position: absolute;
+    right: 55px;
 }
 
 #afterResult #userChoice{
@@ -183,6 +198,7 @@ header{
     letter-spacing: 0.1em;
     color: #FFFFFF;
 }
+
 
 
 
