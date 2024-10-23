@@ -49,8 +49,8 @@ const getComputerChoice = () =>  CHOICES[Math.floor(Math.random() * CHOICES.leng
 const resetUI = () => {
   choiceOfUser.style.outline = choiceOfUser.style.boxShadow = "none";
   choiceOfComputer.style.outline = choiceOfComputer.style.boxShadow = "none";
-  
 }
+
 //Function to Reset the Game
 const resetGame = () => {
   resultpage.style.display = "none";
@@ -97,37 +97,25 @@ function gameResult() {
     }
 }
 
+//Function to update the image and border according to the user and computer choice 
 const updateUI = (choiceElement, choice, borderColor, imageSrc) => {
   choiceElement.style.border = `12px solid ${borderColor}`;
   choiceElement.innerHTML = `<img src="${imageSrc}" alt="${choice}-icon" >`;
 }
 
-// Display 
+// Function which reflects the selections made by the computer and user
 function displaySelection(userChoice, computerChoice) {
   const images = {
     rock: "/assests/rock-icon.png",
     paper: "/assests/paper-icon.png",
     scissor: "/assests/scissor-icon.png",
   }
-
-  // if (userChoice === ROCK) {
-  //   choiceOfUser.style.border = "12px solid #0074b6";
-  //   choiceOfUser.innerHTML = `<img src="/assests/rock-icon.png" alt="rock-icon">`;
-  // } else if (userChoice === PAPER) {
-  //   choiceOfUser.style.border = "12px solid #ffa943";
-  //   choiceOfUser.innerHTML = `<img src="/assests/paper-icon.png" alt="paper-icon">`;
-  // } else {
-  //   choiceOfUser.style.border = "12px solid #bd00ff";
-  //   choiceOfUser.innerHTML = `<img src="/assests/scissor-icon.png" alt="scissor-icon" >`;
-  // }
-
   updateUI(
     choiceOfUser, 
     userChoice,
     userChoice === ROCK ?  "#0074b6" : userChoice === PAPER ? "#ffa943" : "#bd00ff",
     images[userChoice]
   )
-
   updateUI(
     choiceOfComputer,
     computerChoice,
@@ -151,13 +139,6 @@ function startGame() {
     beforeStart.style.display = "block";
     resetUI();
 
-  });
-
-  closeRule.addEventListener("click", () => {
-    ruleBox.style.display = "none";
-  });
-  rulesBtn.addEventListener("click", () => {
-    ruleBox.style.display = "block";
   });
 
   displaySelection(userChoice, computerChoice);
