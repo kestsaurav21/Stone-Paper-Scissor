@@ -1,6 +1,7 @@
-const rockChoice = document.getElementById("rock");
-const paperChoice = document.getElementById("paper");
-const scissorChoice = document.getElementById("scissor");
+//DOM Elements
+
+const choices = document.querySelectorAll(".choice");
+
 
 const closeRule = document.getElementById("rules");
 const rulesBtn = document.getElementById("show-rules-btn");
@@ -26,6 +27,7 @@ const resultmsg = document.querySelector("#result-msg");
 
 const choiceOfUser = document.querySelector("#userChoice");
 const choiceOfComputer = document.querySelector("#computerChoice");
+
 
 const ROCK = "rock";
 const PAPER = "paper";
@@ -90,6 +92,10 @@ function startGame() {
   playAgain.addEventListener("click", function play() {
     afterResult.style.display = "none";
     beforeStart.style.display = "block";
+    choiceOfUser.style.outline = "none";
+    choiceOfUser.style.boxShadow = "none";
+    choiceOfComputer.style.outline = "none";
+    choiceOfComputer.style.boxShadow = "none";
   });
 
   closeRule.addEventListener("click", () => {
@@ -115,7 +121,12 @@ function startGame() {
     rulesBtn.style.right = "220px";
     ruleBox.style.display = "none";
     playAgain.innerHTML = "PLAY AGAIN";
+    
 
+    choiceOfUser.style.outline = "22px solid #279a27";
+    choiceOfUser.style.boxShadow = "0 0 0 40px #33a62f, 0 0 0 55px #66b248";
+
+    
 
 
     nextBtn.addEventListener("click", () => {
@@ -148,6 +159,10 @@ function startGame() {
     resultText.innerText = "YOU LOST AGAINST PC";
     playAgain.innerHTML = "PLAY AGAIN";
 
+    choiceOfComputer.style.outline = "22px solid #279a27";
+    choiceOfComputer.style.boxShadow = "0 0 0 40px #33a62f, 0 0 0 55px #66b248";
+
+
     nextBtn.style.display = "none";
     rulesBtn.style.right = "60px";
 
@@ -171,16 +186,11 @@ function gameResult(user, computer) {
 // ------- Initial setup --------
 
 function initialSetup() {
-  rockChoice.addEventListener("click", startGame);
-  paperChoice.addEventListener("click", startGame);
-  scissorChoice.addEventListener("click", startGame);
 
-  closeRule.addEventListener("click", () => {
-    ruleBox.style.display = "none";
-  });
-  rulesBtn.addEventListener("click", () => {
-    ruleBox.style.display = "block";
-  });
+  choices.forEach( choice => choice.addEventListener("click", startGame));
+  closeRule.addEventListener("click", () => (ruleBox.style.display ="none"));
+  rulesBtn.addEventListener("click", () => (ruleBox.style.display = "block"));
+
 }
 
 initialSetup();
