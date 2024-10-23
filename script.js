@@ -2,7 +2,6 @@
 
 const choices = document.querySelectorAll(".choice");
 
-
 const closeRule = document.getElementById("rules");
 const rulesBtn = document.getElementById("show-rules-btn");
 const ruleBox = document.querySelector("#rule-box");
