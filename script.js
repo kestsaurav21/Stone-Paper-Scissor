@@ -1,5 +1,4 @@
 //DOM Elements
-
 const choices = document.querySelectorAll(".choice");
 
 const closeRule = document.getElementById("rules");
@@ -47,6 +46,11 @@ function getUserChoice(event) {
 const getComputerChoice = () =>  CHOICES[Math.floor(Math.random() * CHOICES.length)];
 
 
+const resetUI = () => {
+  choiceOfUser.style.outline = choiceOfUser.style.boxShadow = "none";
+  choiceOfComputer.style.outline = choiceOfComputer.style.boxShadow = "none";
+  
+}
 
 
 //Game Logic
@@ -64,6 +68,13 @@ function determineResult(user, computer) {
 }
 
 function displaySelection(userChoice, computerChoice) {
+  
+  const images = {
+    rock: "/assests/rock-icon.png",
+    paper: "/assests/paper-icon.png",
+    scissor: "/assests/scissor-icon.png",
+  };
+
   if (userChoice === ROCK) {
     choiceOfUser.style.border = "12px solid #0074b6";
     choiceOfUser.innerHTML = `<img src="/assests/rock-icon.png" alt="rock-icon">`;
@@ -89,6 +100,7 @@ function displaySelection(userChoice, computerChoice) {
   }
 }
 
+
 //----- Game Start ------
 
 function startGame() {
@@ -103,13 +115,11 @@ function startGame() {
 
   const winner = determineResult(userChoice, computerChoice);
 
-  playAgain.addEventListener("click", function play() {
+  playAgain.addEventListener("click", () => {
     afterResult.style.display = "none";
     beforeStart.style.display = "block";
-    choiceOfUser.style.outline = "none";
-    choiceOfUser.style.boxShadow = "none";
-    choiceOfComputer.style.outline = "none";
-    choiceOfComputer.style.boxShadow = "none";
+    resetUI();
+    
   });
 
   closeRule.addEventListener("click", () => {
