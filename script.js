@@ -1,7 +1,7 @@
 //DOM Elements
 const choices = document.querySelectorAll(".choice");
 
-const closeRule = document.getElementById("rules");
+const closeRule = document.getElementById("close-rules");
 const rulesBtn = document.getElementById("show-rules-btn");
 const ruleBox = document.querySelector("#rule-box");
 
@@ -97,32 +97,43 @@ function gameResult() {
     }
 }
 
+const updateUI = (choiceElement, choice, borderColor, imageSrc) => {
+  choiceElement.style.border = `12px solid ${borderColor}`;
+  choiceElement.innerHTML = `<img src="${imageSrc}" alt="${choice}-icon" >`;
+}
+
 // Display 
 function displaySelection(userChoice, computerChoice) {
-
-  if (userChoice === ROCK) {
-    choiceOfUser.style.border = "12px solid #0074b6";
-    choiceOfUser.innerHTML = `<img src="/assests/rock-icon.png" alt="rock-icon">`;
-  } else if (userChoice === PAPER) {
-    choiceOfUser.style.border = "12px solid #ffa943";
-    choiceOfUser.innerHTML = `<img src="/assests/paper-icon.png" alt="paper-icon">`;
-  } else {
-    choiceOfUser.style.border = "12px solid #bd00ff";
-    choiceOfUser.innerHTML = `<img src="/assests/scissor-icon.png" alt="scissor-icon" >`;
+  const images = {
+    rock: "/assests/rock-icon.png",
+    paper: "/assests/paper-icon.png",
+    scissor: "/assests/scissor-icon.png",
   }
 
-  if (computerChoice === ROCK) {
+  // if (userChoice === ROCK) {
+  //   choiceOfUser.style.border = "12px solid #0074b6";
+  //   choiceOfUser.innerHTML = `<img src="/assests/rock-icon.png" alt="rock-icon">`;
+  // } else if (userChoice === PAPER) {
+  //   choiceOfUser.style.border = "12px solid #ffa943";
+  //   choiceOfUser.innerHTML = `<img src="/assests/paper-icon.png" alt="paper-icon">`;
+  // } else {
+  //   choiceOfUser.style.border = "12px solid #bd00ff";
+  //   choiceOfUser.innerHTML = `<img src="/assests/scissor-icon.png" alt="scissor-icon" >`;
+  // }
 
-   choiceOfComputer.style.border = "12px solid #0074b6";
+  updateUI(
+    choiceOfUser, 
+    userChoice,
+    userChoice === ROCK ?  "#0074b6" : userChoice === PAPER ? "#ffa943" : "#bd00ff",
+    images[userChoice]
+  )
 
-    choiceOfComputer.innerHTML = `<img src="/assests/rock-icon.png" alt="rock-icon">`;
-  } else if (computerChoice === PAPER) {
-    choiceOfComputer.style.border = "12px solid #ffa943";
-    choiceOfComputer.innerHTML = `<img src="/assests/paper-icon.png" alt="paper-icon">`;
-  } else {
-    choiceOfComputer.style.border = "12px solid #bd00ff";
-    choiceOfComputer.innerHTML = `<img src="/assests/scissor-icon.png" alt="scissor-icon">`;
-  }
+  updateUI(
+    choiceOfComputer,
+    computerChoice,
+    computerChoice === ROCK ?  "#0074b6" : userChoice === PAPER ? "#ffa943" : "#bd00ff",
+    images[computerChoice]
+  )
 }
 
 //----- Game Start ------
