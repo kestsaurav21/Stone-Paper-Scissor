@@ -28,10 +28,14 @@ const choiceOfUser = document.querySelector("#userChoice");
 const choiceOfComputer = document.querySelector("#computerChoice");
 
 
+//Game Constants
 const ROCK = "rock";
 const PAPER = "paper";
 const SCISSOR = "scissor";
+const CHOICES = [ROCK, PAPER, SCISSOR];
 
+
+// Utility Functions
 function getUserChoice(event) {
   if (event.target.tagName === "DIV") {
     return event.target.id;
@@ -40,12 +44,23 @@ function getUserChoice(event) {
   }
 }
 
-function getComputerChoice() {
-  const computerChoices = [ROCK, PAPER, SCISSOR];
+const getComputerChoice = () =>  CHOICES[Math.floor(Math.random() * CHOICES.length)];
 
-  const idx = Math.floor(Math.random() * 3);
 
-  return computerChoices[idx];
+
+
+//Game Logic
+function determineResult(user, computer) {
+  if (user == computer) return 0;
+  if (
+    (user === ROCK && computer === SCISSOR) ||
+    (user === PAPER && computer === ROCK) ||
+    (user === SCISSOR && computer === PAPER)
+  ) {
+    return 1;
+  } else {
+    return -1;
+  }
 }
 
 function displaySelection(userChoice, computerChoice) {
@@ -80,13 +95,13 @@ function startGame() {
   const userChoice = getUserChoice(event);
   const computerChoice = getComputerChoice();
 
-  console.log(userChoice);
-  console.log(computerChoice);
+  // console.log(userChoice);
+  // console.log(computerChoice);
 
   beforeStart.style.display = "none";
   afterResult.style.display = "flex";
 
-  const winner = gameResult(userChoice, computerChoice);
+  const winner = determineResult(userChoice, computerChoice);
 
   playAgain.addEventListener("click", function play() {
     afterResult.style.display = "none";
@@ -169,18 +184,7 @@ function startGame() {
   }
 }
 
-function gameResult(user, computer) {
-  if (user == computer) return 0;
-  if (
-    (user === ROCK && computer === SCISSOR) ||
-    (user === PAPER && computer === ROCK) ||
-    (user === SCISSOR && computer === PAPER)
-  ) {
-    return 1;
-  } else {
-    return -1;
-  }
-}
+
 
 // ------- Initial setup --------
 
