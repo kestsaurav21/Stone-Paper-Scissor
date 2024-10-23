@@ -71,7 +71,7 @@ To run the game locally, follow these steps:
 
 **Result Page**:
 
-![Rock Paper Scissors Game Preview](./assets/screenshots/result.pngresult.png)
+![Rock Paper Scissors Game Preview](./assets/screenshots/result.png)
 
 
 
