@@ -14,7 +14,8 @@ A web-based implementation of the classic "Rock, Paper, Scissors" game where use
 
 ## Demo
 
-![Rock Paper Scissors Game Preview](./assests/screenshots/landing.png)
+
+
 
 ## Technologies Used
 
@@ -55,6 +56,15 @@ To run the game locally, follow these steps:
 ## Screenshots
 
 **Game Start**:
+
+![Rock Paper Scissors Game Preview](./assests/screenshots/landing.png)
+![Rock Paper Scissors Game Preview](./assests/screenshots/GameStart.png)
+![Rock Paper Scissors Game Preview](./assests/screenshots/GameOn.png)
+
+
+**Result Page**:
+
+![Rock Paper Scissors Game Preview](./assests/screenshots/result.png)
 
 
 
