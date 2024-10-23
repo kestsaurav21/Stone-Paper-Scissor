@@ -26,15 +26,15 @@ const resultmsg = document.querySelector("#result-msg");
 const choiceOfUser = document.querySelector("#userChoice");
 const choiceOfComputer = document.querySelector("#computerChoice");
 
-
 //Game Constants
 const ROCK = "rock";
 const PAPER = "paper";
 const SCISSOR = "scissor";
 const CHOICES = [ROCK, PAPER, SCISSOR];
 
+//------------ Utility Functions ---------------
 
-// Utility Functions
+//Function to get User Choice
 function getUserChoice(event) {
   if (event.target.tagName === "DIV") {
     return event.target.id;
@@ -42,16 +42,16 @@ function getUserChoice(event) {
     return event.target.parentNode.id;
   }
 }
-
+//Function to get Computer Choice
 const getComputerChoice = () =>  CHOICES[Math.floor(Math.random() * CHOICES.length)];
 
-
+//Reset Function for UI
 const resetUI = () => {
   choiceOfUser.style.outline = choiceOfUser.style.boxShadow = "none";
   choiceOfComputer.style.outline = choiceOfComputer.style.boxShadow = "none";
   
 }
-
+//Function to Reset the Game
 const resetGame = () => {
   resultpage.style.display = "none";
   header.style.display = "flex";
@@ -62,8 +62,7 @@ const resetGame = () => {
   computerScore.innerText = "0";
 }
 
-
-//Game Logic
+//Function for Game Logic
 function determineResult(user, computer) {
   if (user == computer) return 0;
   if (
@@ -77,6 +76,28 @@ function determineResult(user, computer) {
   }
 }
 
+//Function to display the result of the game -> Result can have three result ( User Win / Computer Win / Tie)
+function gameResult() {
+    header.style.display = "none";
+    playground.style.display = "none";
+    resultpage.style.display = "block";
+    nextBtn.style.display = "none";
+    rulesBtn.style.right = "60px";
+    resultpage.style.display = "block";
+    if(parseInt(userScore.innerText) == parseInt(computerScore.innerText)){
+      congratmsg.innerText = "TIE!!";
+      resultmsg.innerText = "MATCH IS TIE";
+    }
+    else if (parseInt(userScore.innerText) < parseInt(computerScore.innerText)) {
+      congratmsg.innerText = "SORRY!!";
+      resultmsg.innerText = "YOU LOST THE GAME";
+    } else {
+      congratmsg.innerText = "HURRY!!";
+      resultmsg.innerText = "YOU WON THE GAME";
+    }
+}
+
+// Display 
 function displaySelection(userChoice, computerChoice) {
 
   if (userChoice === ROCK) {
@@ -104,15 +125,10 @@ function displaySelection(userChoice, computerChoice) {
   }
 }
 
-
 //----- Game Start ------
-
 function startGame() {
   const userChoice = getUserChoice(event);
   const computerChoice = getComputerChoice();
-
-  // console.log(userChoice);
-  // console.log(computerChoice);
 
   beforeStart.style.display = "none";
   afterResult.style.display = "flex";
@@ -152,25 +168,6 @@ function startGame() {
     choiceOfUser.style.outline = "22px solid #279a27";
     choiceOfUser.style.boxShadow = "0 0 0 40px #33a62f, 0 0 0 55px #66b248";
 
-    nextBtn.addEventListener("click", () => {
-      header.style.display = "none";
-      playground.style.display = "none";
-      resultpage.style.display = "block";
-      nextBtn.style.display = "none";
-      rulesBtn.style.right = "60px";
-      resultpage.style.display = "block";
-      if (parseInt(userScore.innerText) < parseInt(computerScore.innerText)) {
-        congratmsg.innerText = "SORRY!!";
-        resultmsg.innerText = "YOU LOST THE GAME";
-      } else {
-        congratmsg.innerText = "HURRY!!";
-        resultmsg.innerText = "YOU WON THE GAME";
-      }
-    });
-
-    playAgainBtn.addEventListener("click", () => {
-      resetGame();
-    });
   } else {
     computerScore.innerText = parseInt(computerScore.innerText) + 1;
     resultText.innerText = "YOU LOST AGAINST PC";
@@ -185,16 +182,24 @@ function startGame() {
 
     ruleBox.style.display = "none";
   }
+
+  nextBtn.addEventListener("click", () => {
+    gameResult();
+  });
+
+  playAgainBtn.addEventListener("click", () => {
+    resetGame();
+  });
+
 }
 
 // ------- Initial setup --------
-
 function initialSetup() {
 
   choices.forEach( choice => choice.addEventListener("click", startGame));
   closeRule.addEventListener("click", () => (ruleBox.style.display ="none"));
   rulesBtn.addEventListener("click", () => (ruleBox.style.display = "block"));
-
+  
 }
 
 initialSetup();
