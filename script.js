@@ -165,7 +165,6 @@ function startGame() {
   if (winner === 0) {
     resultText.innerText = "TIE UP";
     playAgain.innerText = "REPLAY";
-
     nextBtn.style.display = "none";
     rulesBtn.style.right = "60px";
     ruleBox.style.display = "none";
@@ -183,14 +182,10 @@ function startGame() {
     computerScore.innerText = parseInt(computerScore.innerText) + 1;
     resultText.innerText = "YOU LOST AGAINST PC";
     playAgain.innerHTML = "PLAY AGAIN";
-
     choiceOfComputer.style.outline = "22px solid #279a27";
     choiceOfComputer.style.boxShadow = "0 0 0 40px #33a62f, 0 0 0 55px #66b248";
-
-
     nextBtn.style.display = "none";
     rulesBtn.style.right = "60px";
-
     ruleBox.style.display = "none";
   }
 
