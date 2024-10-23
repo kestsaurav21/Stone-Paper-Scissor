@@ -14,6 +14,13 @@ A web-based implementation of the classic "Rock, Paper, Scissors" game where use
 
 ## Demo
 
+![Rock Paper Scissors Game Preview](./assets/screenshots/demo.gif)
+
+
+## Project Live Link
+
+You can play the game live here: [Rock Paper Scissors Game](https://rockpaperscissorgame21.netlify.app/)
+
 
 
 
@@ -57,14 +64,14 @@ To run the game locally, follow these steps:
 
 **Game Start**:
 
-![Rock Paper Scissors Game Preview](./assests/screenshots/landing.png)
-![Rock Paper Scissors Game Preview](./assests/screenshots/GameStart.png)
-![Rock Paper Scissors Game Preview](./assests/screenshots/GameOn.png)
+![Rock Paper Scissors Game Preview](./assets/screenshots/landing.png)
+![Rock Paper Scissors Game Preview](./assets/screenshots/GameStart.png)
+![Rock Paper Scissors Game Preview](./assets/screenshots/GameOn.png)
 
 
 **Result Page**:
 
-![Rock Paper Scissors Game Preview](./assests/screenshots/result.png)
+![Rock Paper Scissors Game Preview](./assets/screenshots/result.pngresult.png)
 
 
 
