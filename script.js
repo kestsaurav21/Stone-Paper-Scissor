@@ -52,6 +52,16 @@ const resetUI = () => {
   
 }
 
+const resetGame = () => {
+  resultpage.style.display = "none";
+  header.style.display = "flex";
+  playground.style.display = "block";
+  beforeStart.style.display = "block";
+  afterResult.style.display = "none";
+  userScore.innerText = "0";
+  computerScore.innerText = "0";
+}
+
 
 //Game Logic
 function determineResult(user, computer) {
@@ -68,12 +78,6 @@ function determineResult(user, computer) {
 }
 
 function displaySelection(userChoice, computerChoice) {
-  
-  const images = {
-    rock: "/assests/rock-icon.png",
-    paper: "/assests/paper-icon.png",
-    scissor: "/assests/scissor-icon.png",
-  };
 
   if (userChoice === ROCK) {
     choiceOfUser.style.border = "12px solid #0074b6";
@@ -119,7 +123,7 @@ function startGame() {
     afterResult.style.display = "none";
     beforeStart.style.display = "block";
     resetUI();
-    
+
   });
 
   closeRule.addEventListener("click", () => {
@@ -145,13 +149,8 @@ function startGame() {
     rulesBtn.style.right = "220px";
     ruleBox.style.display = "none";
     playAgain.innerHTML = "PLAY AGAIN";
-    
-
     choiceOfUser.style.outline = "22px solid #279a27";
     choiceOfUser.style.boxShadow = "0 0 0 40px #33a62f, 0 0 0 55px #66b248";
-
-    
-
 
     nextBtn.addEventListener("click", () => {
       header.style.display = "none";
@@ -170,13 +169,7 @@ function startGame() {
     });
 
     playAgainBtn.addEventListener("click", () => {
-      resultpage.style.display = "none";
-      header.style.display = "flex";
-      playground.style.display = "block";
-      beforeStart.style.display = "block";
-      afterResult.style.display = "none";
-      userScore.innerText = "0";
-      computerScore.innerText = "0";
+      resetGame();
     });
   } else {
     computerScore.innerText = parseInt(computerScore.innerText) + 1;
@@ -193,8 +186,6 @@ function startGame() {
     ruleBox.style.display = "none";
   }
 }
-
-
 
 // ------- Initial setup --------
 
