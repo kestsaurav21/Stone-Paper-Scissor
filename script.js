@@ -106,9 +106,9 @@ const updateUI = (choiceElement, choice, borderColor, imageSrc) => {
 // Function which reflects the selections made by the computer and user
 function displaySelection(userChoice, computerChoice) {
   const images = {
-    rock: "/assests/rock-icon.png",
-    paper: "/assests/paper-icon.png",
-    scissor: "/assests/scissor-icon.png",
+    rock: "/assets/rock-icon.png",
+    paper: "/assets/paper-icon.png",
+    scissor: "/assets/scissor-icon.png",
   }
   updateUI(
     choiceOfUser, 
